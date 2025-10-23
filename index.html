@@ -25,9 +25,18 @@
       <header class="page-header">
          <div class="container headder-container">
             <nav class="page-nav">
-               <a href="./index.html" class="logo header-logo"
+               <a href="./index.html" class="logo"
                   >Web<span class="logo-span">Studio</span>
                </a>
+               <button
+                  type="button"
+                  class="mobile-menu-button"
+                  aria-label="open menu button "
+               >
+                  <svg width="24" height="24" class="mobile-menu-button-icon">
+                     <use href="./images/icons.svg#icon-menu"></use>
+                  </svg>
+               </button>
                <ul class="menu">
                   <li>
                      <a href="./index.html" class="menu-link current">Studio</a>
@@ -54,14 +63,14 @@
       </header>
       <main>
          <!-- title -->
-         <section class="hero">
+         <section class="hero hiden">
             <div class="container">
                <h1 class="hero-title">Effective Solutions for Your Business</h1>
                <button class="button" type="button">Order Service</button>
             </div>
          </section>
          <!-- feautures -->
-         <section class="features-section">
+         <section class="features-section hiden">
             <div class="container">
                <h2 class="visually-hidden">Our feautures</h2>
                <ul class="features">
@@ -328,7 +337,7 @@
             </div>
          </section>
          <!-- section Portfolio -->
-         <section class="portfolio-section">
+         <section class="portfolio-section hiden">
             <div class="container">
                <h2 class="portfolio-title">Our Portfolio</h2>
                <ul class="portfolio">
@@ -456,7 +465,7 @@
             </div>
          </section>
       </main>
-      <footer class="footer">
+      <footer class="footer hiden">
          <div class="container container-footer">
             <div class="logo-footer-container">
                <a href="./index.html" class="logo logo-footer"
@@ -522,7 +531,7 @@
             </div>
          </div>
       </footer>
-      <div class="beckdrop is-open">
+      <div class="beckdrop hiden">
          <div class="modal">
             <button type="button" class="button-modal-close">
                <svg class="button-modal-close-icon" width="8" height="8">
@@ -612,6 +621,73 @@
                </div>
                <button type="submit" class="button-form">Send</button>
             </form>
+         </div>
+      </div>
+      <div class="mobile-menu">
+         <div class="container">
+            <button type="button" class="mobile-menu-close-button">
+               <svg width="8" height="8" class="mobile-menu-close-button-icon">
+                  <use href="./images/icons.svg#icon-close"></use>
+               </svg>
+            </button>
+            <ul class="mobile-menu-nav">
+               <li class="mobile-menu-item">
+                  <a href="./index.html" class="mobile-menu-link current-mobile"
+                     >Studio</a
+                  >
+               </li>
+               <li class="mobile-menu-item">
+                  <a href="#" class="mobile-menu-link">Portfolio</a>
+               </li>
+               <li class="mobile-menu-item">
+                  <a href="#" class="mobile-menu-link">Contacts</a>
+               </li>
+            </ul>
+            <ul class="mobile-menu-contacts">
+               <li class="mobile-menu-contacts-item">
+                  <a
+                     href="mailto:info@devstudio.com"
+                     class="mobile-menu-contacts-link"
+                     >info@devstudio.com</a
+                  >
+               </li>
+               <li class="mobile-menu-contacts-item">
+                  <a href="tel:+110001111111" class="mobile-menu-contacts-link"
+                     >+11 (000) 111-11-11</a
+                  >
+               </li>
+            </ul>
+
+            <ul class="social-list mobile-social-list">
+               <li class="social-item-link">
+                  <a href="#" class="social-link">
+                     <svg width="24" height="24" class="icon">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                     </svg>
+                  </a>
+               </li>
+               <li class="social-item-link">
+                  <a href="#" class="social-link">
+                     <svg width="24" height="24" class="icon">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                     </svg>
+                  </a>
+               </li>
+               <li class="social-item-link">
+                  <a href="#" class="social-link">
+                     <svg width="24" height="24" class="icon">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                     </svg>
+                  </a>
+               </li>
+               <li class="social-item-link">
+                  <a href="#" class="social-link">
+                     <svg width="24" height="24" class="icon">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                     </svg>
+                  </a>
+               </li>
+            </ul>
          </div>
       </div>
    </body>
