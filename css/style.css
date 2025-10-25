@@ -140,9 +140,14 @@ p {
 }
 /* address */
 /* Desctop  screen*/
+.contacts {
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+}
 @media screen and (min-width: 1157px) {
    .contacts {
-      display: flex;
+      flex-direction: row;
       align-items: center;
       justify-content: center;
       gap: 40px;
@@ -156,11 +161,10 @@ p {
    font-size: 12px;
    line-height: 1.7;
    letter-spacing: 0.04em;
-   padding-top: 12px;
    display: block;
    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+/* Desctop  screen*/
 @media screen and (min-width: 1156px) {
    .contacts-link {
       font-size: 16px;
@@ -245,8 +249,8 @@ p {
 
 .hero-title {
    font-weight: 700;
-   font-size: 56px;
-   line-height: 1.07;
+   font-size: 36px;
+   line-height: 1.11;
    color: #fff;
    text-align: center;
    letter-spacing: 0.02em;
@@ -257,7 +261,9 @@ p {
 }
 @media screen and (min-width: 768px) {
    .hero-title {
+      font-size: 56px;
       margin-bottom: 36px;
+      line-height: 1.07;
    }
 }
 @media screen and (min-width: 1158px) {
@@ -268,11 +274,11 @@ p {
 .button {
    font-weight: 500;
    line-height: 1.5;
+   font-size: 16px;
+   letter-spacing: 0.04em;
    color: #fff;
    background-color: #4d5ae5;
    font-family: "Roboto", sans-serif;
-   font-size: 16px;
-   letter-spacing: 0.04em;
    cursor: pointer;
    padding: 16px 32px;
    margin: 0 auto;
@@ -365,7 +371,7 @@ p {
 .feature-title {
    font-weight: 700;
    font-size: 36px;
-   line-height: 1.11111;
+   line-height: 1.11;
    letter-spacing: 0.02em;
    text-align: center;
    letter-spacing: 0.02em;
@@ -420,6 +426,7 @@ p {
 .team-list {
    list-style: none;
    display: flex;
+   align-items: center;
    flex-direction: column;
    gap: 72px;
 }
@@ -428,7 +435,7 @@ p {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 24px;
+      gap: 64px 24px;
    }
 }
 .team-item {
@@ -534,6 +541,11 @@ p {
       row-gap: 72px;
    }
 }
+@media screen and (min-width: 1158px) {
+   .portfolio-list {
+      row-gap: 40px;
+   }
+}
 .portfolio-container {
    padding: 32px 16px;
    border: 1px solid #e7e9fc;
@@ -606,11 +618,12 @@ p {
    flex-direction: column;
    text-align: center;
    gap: 72px;
-   align-items: baseline;
+   align-items: center;
 }
 @media screen and (min-width: 768px) {
    .container-footer {
       gap: 72px 0;
+      max-width: 584px;
       flex-direction: row;
       flex-wrap: wrap;
       text-align: left;
@@ -623,7 +636,7 @@ p {
 }
 @media screen and (min-width: 768px) {
    .logo-footer-container {
-      margin-right: 108px;
+      margin-right: 24px;
    }
 }
 @media screen and (min-width: 1158px) {
@@ -644,9 +657,8 @@ p {
 
 .logo-footer {
    display: inline-block;
-   padding: 16px 0;
-
-   margin: 0 auto;
+   margin-bottom: 16px;
+   padding: 0;
 }
 
 .logo-span-footer {
@@ -674,6 +686,10 @@ p {
    .footer-text-social {
       text-align: left;
    }
+}
+.social-link-footer-wrapper {
+   width: 100%;
+   max-width: 288px;
 }
 .social-link-footer:focus,
 .social-link-footer:active,
@@ -732,11 +748,16 @@ p {
    border: 1px solid #fff;
 
    padding-left: 16px;
-   width: 264px;
+   width: 288px;
    height: 40px;
 
    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
    transition-property: border-color;
+}
+@media only screen and (min-width: 768px) {
+   .footer-form-input {
+      width: 264px;
+   }
 }
 .footer-form-input::placeholder {
    color: #fff;
@@ -826,7 +847,7 @@ p {
    opacity: 0;
    border-radius: 4px;
    background: rgb(252, 252, 252);
-   padding: 72px 24px 16px;
+   padding: 72px 16px 24px;
 }
 @media screen and (min-width: 768px) {
    .modal {
@@ -951,6 +972,11 @@ p {
 .form-agreement {
    margin-bottom: 24px;
 }
+
+.agreement-checkbox-container {
+   display: flex;
+   align-items: center;
+}
 .agreement-checkbox-label {
    font-size: 12px;
    line-height: 1.17;
@@ -962,6 +988,7 @@ p {
    display: inline-flex;
    justify-content: center;
    align-items: center;
+   flex-shrink: 0;
    width: 16px;
    height: 16px;
    margin-right: 8px;
@@ -974,14 +1001,11 @@ p {
 }
 input[type="checkbox"]:checked
    + .agreement-checkbox-label
+   > .agreement-checkbox-container
    > .agreement-checkbox {
    background-color: #404bbf;
    border: none;
    fill: #f4f4fd;
-}
-.agreement-checkbox-container {
-   display: flex;
-   align-items: center;
 }
 .agrement-link {
    line-height: 1.33333;
