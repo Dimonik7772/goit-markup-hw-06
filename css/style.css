@@ -632,6 +632,7 @@ p {
 @media screen and (min-width: 1158px) {
    .container-footer {
       gap: 0;
+      max-width: 1158px;
    }
 }
 @media screen and (min-width: 768px) {
