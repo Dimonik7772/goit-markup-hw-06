@@ -284,8 +284,20 @@ p {
    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:focus,
-.button:hover {
+.button:hover,
+.button:active {
    background-color: #404bbf;
+}
+@media not (hover: hover) {
+   .button:active {
+      background-color: #404bbf;
+   }
+}
+@media (hover: hover) {
+   .button:hover,
+   .button:active {
+      background-color: #4d5ae5;
+   }
 }
 /* #endregion */
 /*#region features */
@@ -454,9 +466,11 @@ p {
    height: 40px;
 }
 .social-link:focus,
+.social-link:active,
 .social-link:hover {
    background-color: #404bbf;
 }
+
 .icon {
    fill: #f4f4fd;
 }
@@ -662,10 +676,21 @@ p {
    }
 }
 .social-link-footer:focus,
+.social-link-footer:active,
 .social-link-footer:hover {
    background-color: #31d0aa;
 }
-
+@media (hover: hover) {
+   .social-link-footer:focus,
+   .social-link-footer:hover {
+      background-color: #31d0aa;
+   }
+}
+@media not (hover: hover) {
+   .social-link-footer:active {
+      background-color: #31d0aa;
+   }
+}
 @media screen and (min-width: 1158px) {
    .footer-form-wrapper {
       margin-left: auto;
@@ -745,8 +770,21 @@ p {
       margin-top: 0;
    }
 }
-.footer-form-button:hover {
+.footer-form-button:hover,
+.footer-form-button:focus,
+.footer-form-button:active {
    background-color: #31d0aa;
+}
+@media (hover: hover) {
+   .footer-form-button:hover,
+   .footer-form-button:focus {
+      background-color: #31d0aa;
+   }
+}
+@media not (hover: hover) {
+   .footer-form-button:active {
+      background-color: #31d0aa;
+   }
 }
 .footer-form-icon {
    margin-left: 16px;
@@ -970,8 +1008,21 @@ input[type="checkbox"]:checked
    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
    transition-property: background-color;
 }
-.button-form:hover {
+.button-form:hover,
+.button-form:focus,
+.button-form:active {
    background-color: #404bbf;
+}
+@media (hover: hover) {
+   .button-form:hover,
+   .button-form:focus {
+      background-color: #4d5ae5;
+   }
+}
+@media not (hover: hover) {
+   .button-form:active {
+      background-color: #404bbf;
+   }
 }
 /* #endregion */
 /* #region mobile menu */
