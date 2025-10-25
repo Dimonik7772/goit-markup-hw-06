@@ -779,7 +779,8 @@ p {
    left: 50%;
    top: 50%;
    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-   max-width: 408px;
+   width: 100%;
+   max-width: 288px;
    min-height: 584px;
    transform: translateX(-50%) translateY(-80%);
    box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 1px 0px,
@@ -787,7 +788,13 @@ p {
    opacity: 0;
    border-radius: 4px;
    background: rgb(252, 252, 252);
-   padding: 72px 24px 24px;
+   padding: 72px 24px 16px;
+}
+@media screen and (min-width: 768px) {
+   .modal {
+      max-width: 408px;
+      padding: 72px 24px 24px;
+   }
 }
 .beckdrop.is-open .modal {
    opacity: 1;
@@ -884,7 +891,6 @@ p {
 .modal-form-massage {
    resize: none;
    width: 100%;
-   width: 360px;
    height: 120px;
    padding: 8px 16px;
    border: 1px solid rgba(46, 47, 66, 0.4);
@@ -934,6 +940,10 @@ input[type="checkbox"]:checked
    background-color: #404bbf;
    border: none;
    fill: #f4f4fd;
+}
+.agreement-checkbox-container {
+   display: flex;
+   align-items: center;
 }
 .agrement-link {
    line-height: 1.33333;
