@@ -55,6 +55,7 @@ p {
    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
       0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
+
 @media screen and (min-width: 768px) {
    .headder-container {
       display: flex;
@@ -188,7 +189,7 @@ p {
    background: #2e2f42;
    padding: 72px 0;
 
-   max-width: 1440px;
+   max-width: 320px;
    margin: 0 auto;
    background-image: linear-gradient(
          rgba(46, 47, 66, 0.7),
@@ -210,6 +211,7 @@ p {
 }
 @media screen and (min-width: 768px) {
    .hero {
+      max-width: 768px;
       padding: 112px 0;
       background-image: linear-gradient(
             rgba(46, 47, 66, 0.7),
@@ -229,6 +231,7 @@ p {
 }
 @media screen and (min-width: 1158px) {
    .hero {
+      max-width: 1440px;
       padding: 188px 0;
       background-image: linear-gradient(
             rgba(46, 47, 66, 0.7),
@@ -254,13 +257,14 @@ p {
    color: #fff;
    text-align: center;
    letter-spacing: 0.02em;
-   min-width: 216px;
-   max-width: 496px;
+   max-width: 216px;
+
    margin: 0 auto;
    margin-bottom: 72px;
 }
 @media screen and (min-width: 768px) {
    .hero-title {
+      max-width: 496px;
       font-size: 56px;
       margin-bottom: 36px;
       line-height: 1.07;
@@ -627,6 +631,7 @@ p {
       flex-direction: row;
       flex-wrap: wrap;
       text-align: left;
+      align-items: baseline;
    }
 }
 @media screen and (min-width: 1158px) {
@@ -1104,6 +1109,9 @@ input[type="checkbox"]:checked
 .mobile-menu-close-button {
    position: absolute;
    background-color: transparent;
+   display: flex;
+   align-items: center;
+   justify-content: center;
    top: 24px;
    right: 24px;
    border: 1px solid #e7e9fc;
@@ -1132,7 +1140,7 @@ input[type="checkbox"]:checked
 }
 .mobile-menu-contacts {
    margin-bottom: 48px;
-
+   font-style: normal;
    font-weight: 500;
    font-size: 20px;
    line-height: 1.2;
